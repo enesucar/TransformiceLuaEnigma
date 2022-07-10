@@ -3,18 +3,18 @@ $("#submit").click(function () {
     CreateStringForUser(userName)
 });
 
-var stick = 11;
+var stickId = 11;
 var titleId = 0;
  
 function CreateStringForUser(userName) {
     $.ajax({
         url: "https://cheese.formice.com/api/players/" + userName.replaceAll("#", "-"),
     }).done(function (data) {
-        $('#result').text(stick.toString() + data.id.toString() + titleId.toString());
+        $('#result').text(stickId.toString() + data.id.toString() + titleId.toString());
     }).fail(function () {
         alert("Please enter a nickname.")
     });
-}
+} 
 
 String.prototype.replaceAll = function (str1, str2, ignore) {
     return this.replace(new RegExp(str1.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g, "\\$&"), (ignore ? "gi" : "g")), (typeof (str2) == "string") ? str2.replace(/\$/g, "$$$$") : str2);
