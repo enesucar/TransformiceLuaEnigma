@@ -5,7 +5,7 @@ $("#submit").click(function () {
 
 var stick = 11;
 var titleId = 0;
-
+ 
 function CreateStringForUser(userName) {
     $.ajax({
         url: "https://cheese.formice.com/api/players/" + userName.replaceAll("#", "-"),
