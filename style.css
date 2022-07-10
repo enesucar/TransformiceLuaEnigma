@@ -1,0 +1,13 @@
+.box {
+    position:relative;
+}
+.box_box {
+    position:fixed;
+    right:15px;
+    top:15px;
+}
+
+.home {
+	position: relative; 
+	top:50px;
+}
