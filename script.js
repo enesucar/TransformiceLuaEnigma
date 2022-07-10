@@ -10,7 +10,7 @@ function CreateStringForUser(userName) {
     $.ajax({
         url: "https://cheese.formice.com/api/players/" + userName.replaceAll("#", "-"),
     }).done(function (data) {
-        $('#result').text(a.toString() + data.id.toString() + titleId.toString());
+        $('#result').text(stick.toString() + data.id.toString() + titleId.toString());
     }).fail(function () {
         alert("Please enter a nickname.")
     });
